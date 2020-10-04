@@ -20,13 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret!o
 SECRET_KEY = 's(!!@vb40@#m*cqpr4q#_&-2zey4+2%ng4+_q0wcfm9g5gn0iu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['45.63.10.63', 'scriptspinner.com']
+ALLOWED_HOSTS = ['127.0.0.1','45.63.10.63', 'scriptspinner.com']
 
 
 # Application definition
@@ -75,13 +75,25 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+'''
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hirokiyaginuma',
+        'USER': 'hirokiyaginuma',
+        'PASSWORD': 'scriptspinnerdb',
+        'HOST': 'db4free.net',
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
