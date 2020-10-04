@@ -26,7 +26,7 @@ SECRET_KEY = 's(!!@vb40@#m*cqpr4q#_&-2zey4+2%ng4+_q0wcfm9g5gn0iu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['scriptspinner.com']
+ALLOWED_HOSTS = ['45.63.10.63', 'scriptspinner.com']
 
 
 # Application definition
