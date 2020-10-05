@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 '''
-DATABASES = {
+DATABASES = { # sqlite3 database
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
@@ -85,7 +85,7 @@ DATABASES = {
 '''
 
 DATABASES = {
-    'default': {
+    'default': { # MySQL database on db4free.net
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hirokiyaginuma',
         'USER': 'hirokiyaginuma',
