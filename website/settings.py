@@ -85,12 +85,12 @@ DATABASES = { # sqlite3 database
 '''
 
 DATABASES = {
-    'default': { # MySQL database on db4free.net
+    'default': { 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hirokiyaginuma',
-        'USER': 'hirokiyaginuma',
-        'PASSWORD': 'scriptspinnerdb',
-        'HOST': 'db4free.net',
+        'NAME': 'scriptspinner',
+        'USER': 'scriptspinner',
+        'PASSWORD': 'scriptspinnerdb2020',
+        'HOST': '45.63.10.63',
         'PORT': '3306',
     }
 }
