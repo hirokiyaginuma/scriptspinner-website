@@ -57,7 +57,7 @@
           {% if user.is_authenticated %}
           <li class="drop-down"><a href="">Account</a>
             <ul>
-              <li><a href="#">Download</a></li>
+              <li><a href="{% url 'download' %}">Download</a></li>
               <li><a href="{% url 'subscription' %}">My Subscription</a></li>
               <li><a href="{% url 'account' %}">Account Setting</a></li>
               <li><a href="{% url 'logout' %}">Log out</a></li>

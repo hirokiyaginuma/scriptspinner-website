@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Script Spinner - Title{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block main %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Team</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>team</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+
+        <p>
+        Script Spinner is composed of five stem students who met at the University of Texas at Tyler in their Capstone course. Read along to find out more about the people behind Script Spinner. 
+        Joesph Duncan- Our creator and founder! Joesph is … years old and is from … He is finishing up his bachelor’s in Information Technology. A fun fact about Joesph is …
+        Sean Maples- Sean is our business planner and behind all things business, marketing, and financials! He is graduating with his bachelor’s in CIS and is 26 years old and from Inglewood, California. A fun fact about Sean is that he extremely color blind!
+        Eniola Sogbesan- Our IT professional! Eniola is 23 years old and is from Lagos, Nigeria which is his fun fact! He is graduating with his bachelor’s in Information Technology.
+        Laila Sherif- Laila handles things like editing, social media, and our documentation! She is 20 years old and is from Los Angeles, California. She is graduating with her bachelor’s in Information Technology and a fun fact is that she actually runs a small baking business from her house!
+        Hiroki Yaginuma- Hiroki is apart of the programming duo behind Script Spinner. He is 23 years old and is from Japan which is a fun fact! He will be graduating with his bachelor’s in Computer Science.
+        Mohammad Alkrad- Mohammad is the other part of the aforementioned programming duo! He is … years old and is from … He will be graduating with his bachelor’s in Computer Science and a fun fact about him is that… 
+        </p>
+        <img src="{% static 'img/about.jpg' %}" alt="Team Image" style="width300px; height: 300px;">
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

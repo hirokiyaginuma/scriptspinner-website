@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'index.html', {})
@@ -17,3 +18,7 @@ def views(request):
 
 def contact(request):
     return render(request, 'contact.html', {})
+
+@login_required(login_url='redirect_to_login')
+def download(request):
+    return render(request, 'download.html', {})

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Script Spinner - Title{% endblock %}
+{% block title %}Script Spinner - Testimonial{% endblock %}
 
 {% block css %}
 {% endblock %}
@@ -15,10 +15,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Title</h2>
+          <h2>Testimonial</h2>
           <ol>
             <li><a href="{% url 'index' %}">Home</a></li>
-            <li>Title</li>
+            <li>Testimonial</li>
           </ol>
         </div>
 
@@ -28,19 +28,12 @@
     <section class="inner-page">
       <div class="container">
 
-        <!-- Messages -->
-
-        {% if messages %}
-            {% for msg in messages %}       
-                <div class="alert alert-{{msg.level_tag}}" role="alert">
-                {{msg.message}}
-                </div>
-            {% endfor %}
-        {% endif %}
-
-        <!-- Messages -->
-        
-        <!-- Content -->
+        <p>
+        We think Script Spinner is the best, read along to hear from some of the actual 
+        people who use Script Spinner and feel the same!
+        </p>
+        <p> * insert reviews* </p>
+        <img src="{% static 'img/review.jpg' %}" alt="Five Stars" style="width300px; height: 300px;">
 
       </div>
     </section>

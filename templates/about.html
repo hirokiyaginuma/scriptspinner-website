@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Script Spinner - About{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block main %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>About</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>About</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+
+        <p>Script Spinner was created by five students whose one goal is to help you! 
+            In your academic and professional careers, you will be met with countless 
+            opportunities to create presentations and we want you to be as prepared as 
+            possible. Creating provoking and meaningful presentations can be a way to impress, 
+            inspire, and teach those around you. A great presentation will bring you and 
+            those around you with more knowledge and insight With our program, you will be 
+            able to prep, practice, and perfect your upcoming presentation! We’ve included 
+            exciting features to help you with your timing, eye contact, and much more. Start 
+            off with our free month trial and see what all the hype is about with Script 
+            Spinner! We guarantee that your presentations will never be the same without us!
+        </p>
+        <img src="{% static 'img/about2.jpg' %}" alt="About Image" style="width300px; height: 300px;">
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}
