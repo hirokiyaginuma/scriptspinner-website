@@ -13,6 +13,9 @@ class ScriptSpinnerUserChangeForm(UserChangeForm):
         fields = ('email',)
 
 class RegisterForm(UserCreationForm):
+    first_name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
+    
     class Meta:
         model = ScriptSpinnerUser
         fields = ['email', 'first_name', 'last_name', 'password1', 'password2']

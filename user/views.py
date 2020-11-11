@@ -95,12 +95,23 @@ def logout(request):
     return redirect('login')
 
 @login_required(login_url='redirect_to_login')
+def account(request):
+    return render(request, 'account.html', {})
+
+@login_required(login_url='redirect_to_login')
+def subscription(request):
+    return render(request, 'subscription.html', {})
+
+@login_required(login_url='redirect_to_login')
 def subscribe(request):
+    if request.user.has_paid():
+        messages.info(request, 'You alredy have access to Script Spinner PRO.')
+        return redirect('subscription')
     logger.info("Log: I'm in the subscribe function.")
     return render(request, 'payments/subscribe.html')
 
 @require_POST
-@login_required
+@login_required(login_url='redirect_to_login')
 def payment_method(request):
     logger.info("Log: I'm in the payment_method function.")
     stripe.api_key = API_KEY
@@ -131,7 +142,8 @@ def payment_method(request):
     elif payment_method == 'paypal':
         pass
 
-@login_required
+@require_POST
+@login_required(login_url='redirect_to_login')
 def card(request):
     logger.info("Log: I'm in the card function.")
     payment_intent_id = request.POST['payment_intent_id']

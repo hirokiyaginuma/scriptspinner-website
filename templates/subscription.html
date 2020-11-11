@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Script Spinner - Subscription{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block main %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>My Subscription</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'account' %}"></a>My Account</li></a>
+            <li>My Subscription</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+
+        <!-- Messages -->
+
+        {% if messages %}
+            {% for msg in messages %}       
+                <div class="alert alert-{{msg.level_tag}}" role="alert">
+                {{msg.message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Messages -->
+        
+        <h3>Subscription Status</h3>
+        {% if user.has_paid %}
+        <p></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Your Plan: Script Spinner PRO</li>
+            <li class="list-group-item">paid_until: {{ user.paid_until }}</li>
+        </ul>
+        {% else %}
+        <p></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Your Plan: Script Spinner Free</li>
+            {% if user.paid_until %}
+            <li class="list-group-item">Your plan was expired on {{ user.paid_until }}</li>
+            {% else %}
+            <li class="list-group-item">You have not purchased Script Spinner before.</li>
+            {% endif %}
+        </ul>
+        <p></p>
+        <a href="{% url 'subscribe' %}" class="btn btn-success">Subscribe to PRO</a>
+        {% endif %}
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

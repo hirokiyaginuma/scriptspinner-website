@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Script Spinner - Account{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block main %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>My Account</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>My Account</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+
+        <!-- Messages -->
+
+        {% if messages %}
+            {% for msg in messages %}       
+                <div class="alert alert-{{msg.level_tag}}" role="alert">
+                {{msg.message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Messages -->
+        
+        <h3>My Profile</h3>
+        <p></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Your Name: {{ user.first_name }} {{ user.last_name }}</li>
+            <li class="list-group-item">Email: {{ user.email }}</li>
+            <li class="list-group-item">Last Login: {{ user.last_login }}</li>
+            <li class="list-group-item">Customer since: {{ user.date_joined }}</li>
+        </ul>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}
