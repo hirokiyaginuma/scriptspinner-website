@@ -70,7 +70,7 @@ Script Spinner is the software for planning, organizing and executing script con
 
 ### Other Repos
 
-* scriptspinner-software (Coming soon)
+* [scriptspinner-software](https://github.com/hirokiyaginuma/scriptspinner-software)
 * [scriptspinner-random](https://github.com/hirokiyaginuma/scriptspinner-random)
 
 <!-- GETTING STARTED -->
