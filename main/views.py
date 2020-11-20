@@ -25,3 +25,6 @@ def contact(request):
 @login_required(login_url='redirect_to_login')
 def download(request):
     return render(request, 'download.html', {})
+
+def test1(request):
+    return render(request, 'test1.html', {})
