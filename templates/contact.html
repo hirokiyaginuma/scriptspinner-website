@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Script Spinner - Contact{% endblock %}
+{% block title %}Script Spinner - Title{% endblock %}
 
 {% block css %}
 {% endblock %}
@@ -28,51 +28,71 @@
     <section class="inner-page">
       <div class="container">
 
-        <p>
-        Have questions regarding your Script Spinner subscription? We are here to assist you! <br>
-        Email us with your name and issue and one of our trusted associates will get back to
-        you as quickly as possible! <br>Prefer to chat in real-time? Click on the Chat Support button below!<br>
-        Email: Scriptspinner@gmail.com<br>
-        Number: 903-283-3751 <br>
-        CHAT HOURS
-        Monday-Friday: 8:00 AM -5:00 PM (CST)<br>
-        Want to see more Script Spinner? Follow us on our socials!<br>
-        Instagram: @scriptspinner                         Twitter: @scriptspinner<br>
-        Facebook: @scriptspinner                         TikTok: @scriptspinner<br>
-        </p>
+        <!-- Messages -->
+
+        {% if messages %}
+            {% for msg in messages %}       
+                <div class="alert alert-{{msg.level_tag}}" role="alert">
+                {{msg.message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Messages -->
         
-        <form>
+        <!-- Content -->
+        <div class="Contact">
+
+          <h1 style="text-align:center;">Contact Page</h1>
+      
+          <p style="text-align:center;">Have questions regarding your Script Spinner subscription? We are here to assist you! Email us with your name and issue and one of our trusted associates will get back to you as quickly as possible! </p>
+      
+      
+      <h3 style="text-align:right;">
+          
+          <h3 style="color:#16df7e;"></b>EMAIL</h3></b>
+           Scriptspinner@gmail.com
+      
+      <hr>
+      
+           <h3 style="color:#16df7e;"></b>NUMBER</h3></b>
+           903-555-3751 
+      
+      <hr>
+      
+           <h3 style="color:#16df7e;"></b>ADDRESS</h3></b>
+           3900 University Blvd, Tyler, Texas 75799
+      
+      <hr>
+      
+    </h3>
+      <br>
+    <h3 style="color:#16df7e;"></b>Chat With Us Here!</h3></b>
+      <form class="contact" action="MAILTO:scriptspinner@gmail.com" method="POST" encytype="text/plain" >
           <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
+            <label for="exampleFormControlInput1">Email Address</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
           </div>
+         
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
+            <label for="exampleFormControlSelect2">What Would You Like to Chat About?</label>
             <select multiple class="form-control" id="exampleFormControlSelect2">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+              <option>I Would Like to Leave a Review</option>
+              <option>I Would Like to Create an Account</option>
+              <option>I Would Like to Change My Payment Option</option>
+              <option>I Would Like to Cancel My Account</option>
+              <option>Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea1">Please Go More in Depth...</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="height:200px"></textarea>
           </div>
+          <button class="btn btn-primary" type="submit">Let's Chat</button>
         </form>
-
-
+      
+      <div>
+      
       </div>
     </section>
 

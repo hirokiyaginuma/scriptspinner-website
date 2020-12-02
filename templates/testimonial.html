@@ -27,14 +27,51 @@
 
     <section class="inner-page">
       <div class="container">
-
         <p>
         We think Script Spinner is the best, read along to hear from some of the actual 
         people who use Script Spinner and feel the same!
         </p>
-        <p> * insert reviews* </p>
-        <img src="{% static 'img/review.jpg' %}" alt="Five Stars" style="width: 300px; height: 300px;">
+      
 
+      <!-- Testimonial Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'img/testimonials/5star.png' %}" class="d-block w-100" alt="Review Test 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:#444444;">Ted Davis</h5>
+              <p style="color:#444444;">“I’ve been using Script Spinner for months now, and it has made my life so much easier! My job requires me to make weekly oral reports to my bosses, so this software is a must have for me. I can’t recommend it enough!” <i> &nbsp;&nbsp; ~ 5/5 Webs</i> </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/testimonials/4star.png' %}" class="d-block w-100" alt="Review Test 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:#444444;">Anthony Rami</h5>
+              <p style="color:#444444;">“Class presentations used to stress me out terribly, but after I started using Script Spinner, I don’t mind them nearly as much. This app gives me the tools to easily make great presentations. A giant thank you to the Script Spinner team from both me and my grades!” <i> &nbsp;&nbsp; ~ 4.5/5 Webs</i> </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/testimonials/5star.png' %}" class="d-block w-100" alt="Review Test 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:#444444;">Kimi Stone</h5>
+              <p style="color:#444444;">“My career in local politics has grown dramatically over the last year, and I feel that no small part of that success has come from using Script Spinner to prepare my press speeches. The tools provided in this application have made it so much easier to better structure and communicate the information I wish to convey to my constituency. I look forward to using Script Spinner for years to come!" <i> &nbsp;&nbsp; ~ 5/5 Webs</i> </p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
       </div>
     </section>
 
