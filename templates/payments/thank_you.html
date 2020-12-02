@@ -35,11 +35,203 @@
                 </div>
             {% endfor %}
         {% endif %}
-
+       <h3 style= "text-align:center"><b>Thank You For Purchasing Script Spinner! Below Is Your Invoice For Your Recent Subscription Purchase. We Hope You Enjoy!</h3></b>
         <div class="row py-3">
           <div class="col-lg-12 col-md-12">
              <div class="container">
-                  <h3>Thank You!</h3>
+              <style>
+                .invoice-box {
+                    max-width: 600px;
+                    margin: auto;
+                    padding: 20px;
+                    border: 1px solid #eee;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+                    font-size: 16px;
+                    line-height: 24px;
+                    
+                    color: #16df7e;
+                }
+                
+                .invoice-box table {
+                    width: 100%;
+                    line-height: inherit;
+                    text-align: left;
+                }
+                
+                .invoice-box table td {
+                    padding: 10px;
+                    vertical-align: top;
+                }
+                
+                .invoice-box table tr td:nth-child(2) {
+                    text-align: right;
+                }
+                
+                .invoice-box table tr.top table td {
+                    padding-bottom: 10px;
+                }
+                
+                .invoice-box table tr.top table td.title {
+                    font-size: 35px;
+                    line-height: 45px;
+                    color: #16df7e;
+                }
+                
+                .invoice-box table tr.information table td {
+                    padding-bottom: 40px;
+                }
+                
+                .invoice-box table tr.heading td {
+                    background: #eee;
+                    border-bottom: 2px solid #ddd;
+                    font-weight: italic;
+                }
+                
+                .invoice-box table tr.details td {
+                    padding-bottom: 30px;
+                }
+                
+                .invoice-box table tr.item td{
+                    border-bottom: 1px solid #eee;
+                }
+                
+                .invoice-box table tr.item.last td {
+                    border-bottom: none;
+                }
+                
+                .invoice-box table tr.total td:nth-child(2) {
+                    border-top: 2px solid #eee;
+                    font-weight: italic;
+                }
+                
+                @media only screen and (max-width: 600px) {
+                    .invoice-box table tr.top table td {
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                    }
+                    
+                    .invoice-box table tr.information table td {
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+                
+                /** RTL **/
+                .rtl {
+                    direction: rtl;
+                    
+                }
+                
+                .rtl table {
+                    text-align: right;
+                }
+                
+                .rtl table tr td:nth-child(2) {
+                    text-align: left;
+                }
+                </style>
+            </head>
+            
+            <body>
+                <div class="invoice-box">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr class="top">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td class="title">
+                                            <img style= "display:block; margin-left: auto; margin-right: auto; width: 50%" src="{% static 'img/img_script.png'%}"alt="Logo">
+                                        </td>
+                                       
+                      
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        
+                        <tr class="information">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Script Spinner<br>
+                                            3900 University Blvd <br>
+                                            Tyler, Texas 
+                                           
+                                        </td>
+                                        
+                                        <td>
+                                            Jane Doe <br>
+                                            j@gmail.com
+                                           
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        
+                        <tr class="heading">
+                            <td>
+                                Form of Payment
+                            </td>
+                            
+                            <td>
+                                Details
+                            </td>
+                        </tr>
+                        
+                        <tr class="details">
+                            <td>
+                                Credit Card
+                            </td>
+                            
+                            <td>
+                                01234
+                            </td>
+                        </tr>
+                        
+                        <tr class="heading">
+                            <td>
+                                Subscription Type
+                            </td>
+                            
+                            <td>
+                                Price
+                            </td>
+                        </tr>
+                        
+                        <tr class="item">
+                            <td>
+                                Annual Subscription
+                            </td>
+                            
+                            <td>
+                                $120.00
+                            </td>
+                        </tr>
+
+                        <tr class="item">
+                            <td>
+                                Launch Discount
+                            </td>
+                            
+                            <td>
+                                -$10.00
+                            </td>
+                        </tr>
+                        
+              
+                        
+                        <tr class="total">
+                            <td></td>
+                            
+                            <td>
+                               Annual Total: $110.00
+                            </td>
+                        </tr>
+                    </table>
              </div>
           </div>
       </div>  
