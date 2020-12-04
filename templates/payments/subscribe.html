@@ -42,8 +42,8 @@
                   <form method="POST" action="{% url 'payment_method' %}">
                       {% csrf_token %}
                       <div class="form-group">
-                        <label for="exampleFormControlSelect1">Plan</label>
-                        <select class="form-control" id="exampleFormControlSelect1" name="plan">
+                        <label>Plan</label>
+                        <select class="form-control" name="plan">
                           <option value="m" default>$10.00 (monthly)</option>
                           <option value="a">$120.00 (annual)</option>
                         </select>

@@ -136,6 +136,8 @@ def payment_method(request):
         context['payment_intent_id'] = payment_intent.id
         context['automatic'] = automatic
         context['stripe_plan_id'] = plan_inst.stripe_plan_id
+        context['plan'] = plan
+        context['payment_method'] = payment_method
 
         return render(request, 'payments/card.html', context)
 
@@ -150,6 +152,8 @@ def card(request):
     payment_method_id = request.POST['payment_method_id']
     stripe_plan_id = request.POST['stripe_plan_id']
     automatic = request.POST['automatic']
+    plan = request.POST.get('plan')
+    payment_method = request.POST.get('payment_method')
     stripe.api_key = API_KEY
 
     if automatic == 'on':
@@ -205,4 +209,17 @@ def card(request):
 
             return render(request, 'payments/3dsec.html', context)
 
-    return render(request, 'payments/thank_you.html')
+    context = {}
+    if plan == 'm':
+        context['plan'] = 10
+        context['plan_name'] = 'Monthly'
+    elif plan == 'a':
+        context['plan'] = 120
+        context['plan_name'] = 'Annual'
+    else:
+        context['plan'] = 'error'
+        context['plan_name'] = 'error'
+    if payment_method == 'card':
+        context['payment_method'] = 'Credit Card'
+
+    return render(request, 'payments/thank_you.html', context)
